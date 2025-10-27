@@ -1,20 +1,35 @@
-/**
- * System Monitoring Script - Production
- * Monitors application health and performance
- */
+const ENV=process.env.NODE_ENV || 'production';
 
 const monitorConfig = {
+  production:{
   interval: 60000, // 1 minute
   alertThreshold: 80,
-  metricsEndpoint: 'http://localhost:8080/metrics'
+  debugMode:false
+  },
+  development:{
+   interval:5000,
+   alertThreshold:90,
+   debugMode:true,
+   verboseLogging:true
+}
 };
 
+const config=monitorConfig[ENV];
+
 console.log('=================================');
-console.log('DevOps Simulator - Monitor v1.0');
+console.log('DevOps Simulator - Monitor');
+console.log('Environment:${ENV}');
+console.log('Debug:${config.debugMode ? 'ENABLED':'DISABLED'}');
 console.log('=================================');
 
 function checkSystemHealth() {
-  console.log(`[${new Date().toISOString()}] Checking system health...`);
+  const timestamp=new Date().toISOString();
+  if (config.degubMode){
+  console.log('\n[${timestamp}]===DETAILED HEALTH CHECK ===');
+  }
+  else{
+   console.log('[${timestamp}] Checking system health...');
+  }
   
   // Check CPU usage
   console.log('✓ CPU usage: Normal');
@@ -24,13 +39,17 @@ function checkSystemHealth() {
   
   // Check Disk
   console.log('✓ Disk space: Adequate');
-  
+
+if(config.debugMode){
+console.log('Hot reload:Active');
+console.log('Debug port:9229');
+}
   console.log('System Status: HEALTHY');
 }
 
 // Start monitoring
-console.log(`Monitoring every ${monitorConfig.interval}ms`);
-setInterval(checkSystemHealth, monitorConfig.interval);
+console.log(`Monitoring every ${config.interval}ms`);
+setInterval(checkSystemHealth, Config.interval);
 
 // Run first check immediately
 checkSystemHealth();
