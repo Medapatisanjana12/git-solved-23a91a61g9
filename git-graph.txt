@@ -1,0 +1,17 @@
+* 8704106 (HEAD -> main, origin/main, origin/HEAD) docs:Add changelog
+| * eed98a1 (origin/feature/another-feature) feat:Add test feature
+|/  
+* f5baab7 (tag: v1.1.0, tag: v1.0.0, feature/another-feature) docs:Update README
+| * 5235aac (origin/feature/new-feature, feature/new-feature) feat: Add new feature
+|/  
+*   6a0615f Merge branch 'conflict-simulator'
+|\  
+| * d3dd9b2 (instructor/conflict-simulator, conflict-simulator) updating conflict-simulator
+* |   7b98e27 merge: Resolve all conflicts between main and dev branches
+|\ \  
+| * | 02011a5 (instructor/dev) updating dev
+| |/  
+* | 0312c6f (instructor/main, instructor/HEAD) updating main
+* | fadfd24 Revise README for DevOps Simulator project
+|/  
+* ae630eb Initial commit
