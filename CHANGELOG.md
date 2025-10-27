@@ -1,0 +1,8 @@
+- f5baab7: docs:Update README (sanju, 7 minutes ago)
+- 6a0615f: Merge branch 'conflict-simulator' (sanju, 22 minutes ago)
+- 7b98e27: merge: Resolve all conflicts between main and dev branches (sanju, 41 minutes ago)
+- d3dd9b2: updating conflict-simulator (Hanu Gupta, 4 days ago)
+- 02011a5: updating dev (Hanu Gupta, 4 days ago)
+- 0312c6f: updating main (Hanu Gupta, 4 days ago)
+- fadfd24: Revise README for DevOps Simulator project (Hanu Gupta, 4 days ago)
+- ae630eb: Initial commit (Hanu Gupta, 4 days ago)
